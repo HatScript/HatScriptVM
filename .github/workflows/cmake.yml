@@ -33,6 +33,5 @@ jobs:
       run: cmake -S . -B ./build/tests
       
     - name: Test
-      working-directory: ${{github.workspace}}/build
       shell: bash
       run: cd build & ctest
