@@ -25,12 +25,12 @@ jobs:
       
     - name: BuildVMLib
       shell: bash
-      run: cmake -S . -B ./build/HatScriptVM
+      run: cmake --build ./build/HatScriptVM
       
       
     - name: BuildTests
       shell: bash
-      run: cmake -S . -B ./build/tests
+      run: cmake --build ./build/tests
       
     - name: Test
       shell: bash
