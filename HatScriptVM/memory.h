@@ -2,11 +2,13 @@
 // Created by florian on 3/26/21.
 //
 
+#ifndef HATSCRIPT_MEMORY_H
+#define HATSCRIPT_MEMORY_H
+
 #include <stdlib.h>
 #include "vm.h"
 
-#ifndef HATSCRIPT_MEMORY_H
-#define HATSCRIPT_MEMORY_H
+typedef struct VM VM;
 
 #define FREE(pointer, oldSize, vm) \
     reallocate(pointer, oldSize, 0, vm)

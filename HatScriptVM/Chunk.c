@@ -19,7 +19,7 @@ int writeChunk(VM* vm, Chunk* chunk, Instruction instruction) {
         chunk->instructions = tmp;
     }
 
-    chunk->instructions[++chunk->size] = instruction;
+    chunk->instructions[chunk->size++] = instruction;
 
     return 0;
 }

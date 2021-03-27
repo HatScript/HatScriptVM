@@ -7,8 +7,15 @@
 
 #include <stdint.h>
 
-typedef enum OpCode {
-    STOP
+typedef enum{
+    STOP,
+    LOAD_CONSTANT,
+    NEG,
+    ADD,
+    SUB,
+    MUL,
+    DIV,
+    MOD
 } OpCode;
 
 typedef struct {

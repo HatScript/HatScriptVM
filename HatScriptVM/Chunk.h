@@ -7,8 +7,11 @@
 
 
 #include <stdint.h>
+#include "vm.h"
 #include "memory.h"
 #include "Instructions.h"
+
+typedef struct VM VM;
 
 typedef struct Chunk {
     int size;

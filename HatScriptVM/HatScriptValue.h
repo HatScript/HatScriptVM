@@ -13,15 +13,23 @@
 #define IS_BOOL(value) value.type == BOOL
 #define IS_OBJECT(value) value.type == OBJECT
 
+#define IS_STRING(object)
 
-typedef enum Type{
+
+#define NUMBER_VAL(value) \
+    ((Value){DOUBLE, {.d = (double) value}})
+
+#define AS_NUMBER(value) \
+    (value).d
+
+typedef enum {
   DOUBLE,
   INT,
   BOOL,
   OBJECT
 } Type;
 
-typedef struct Value {
+typedef struct {
     Type type;
     union {
         double d;
@@ -29,5 +37,16 @@ typedef struct Value {
         bool b;
     };
 } Value;
+
+typedef enum {
+    STRING,
+    CLASS,
+    LIST,
+    MAP,
+    INSTANCE,
+    FUNCTION,
+    CLOSURE,
+    NATIVE,
+} ObjType;
 
 #endif //HATSCRIPT_HATSCRIPTVALUE_H
