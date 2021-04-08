@@ -1,3 +1,3 @@
-add_library(HatScriptVM vm.c vm.h memory.c memory.h Chunk.c Chunk.h Instructions.h HatScriptValue.c HatScriptValue.h CallFrame.c CallFrame.h)
+add_library(HatScriptVM vm.c vm.h memory.c memory.h Chunk.c Chunk.h Instructions.h HatScriptValue.c HatScriptValue.h CallFrame.c CallFrame.h compiler.c compiler.h scanner.c scanner.h)
 
 target_include_directories (HatScriptVM PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

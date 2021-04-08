@@ -15,7 +15,14 @@ typedef enum{
     SUB,
     MUL,
     DIV,
-    MOD
+    MOD,
+    NOT,
+    EQUAL,
+    GREATER,
+    GREATER_EQUAL,
+    LESS,
+    LESS_EQUAL,
+    NOT_EQUAL
 } OpCode;
 
 typedef struct {

@@ -10,6 +10,16 @@
 #include "Chunk.h"
 #include "Instructions.h"
 
+typedef enum ResultType {
+    RESUKLT_OK,
+    OUT_OF_MEMORY,
+    TYPE_ERROR
+} ResultType;
+
+typedef struct Error {
+    ErrorType type;
+    char* msg;
+} Result;
 
 typedef struct VM {
     Value* stack;
@@ -24,6 +34,6 @@ typedef struct VM {
 void initVM(VM* vm, size_t maxMemory, int maxStackSize);
 void freeVM(VM* vm);
 
-void runVM(VM* vm);
+_Noreturn Result runVM(VM* vm);
 
 #endif //HATSCRIPT_VM_H
